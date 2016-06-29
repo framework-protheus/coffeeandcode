@@ -9,6 +9,7 @@ module.exports = function(app, checkLogin) {
 
   router.get('/', topics.list);
   router.post('/', topics.new);
+  router.put('/', topics.update);
 
   app.use('/topics', router);
 };

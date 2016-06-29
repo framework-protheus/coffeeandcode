@@ -63,6 +63,22 @@
 	<script src="bower_components/rateit/src/jquery.rateit.js"></script>
 	<script>
 		$('.rateit').rateit();
+	
+		function TopicInitialCharge(){
+			$.post("topics", {title: "Felipe", description: "felipe", votes: 10}, function(){
+				console.log("Carga inicial efetuada.");
+			});
+		}
+		function AlterTopics(){
+			$.ajax({
+				url: 'topics',
+				type: 'PUT',
+				data: {setTitle: "----------", title: "Felipe", description: "*******", votes: 20},
+				success: function(result) {
+					console.log("Put efetuado.");
+				}
+			});
+		}
 	</script>
 </body>
 </html>

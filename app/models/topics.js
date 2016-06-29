@@ -3,14 +3,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// create a schema
+// topic schema
 var topicSchema = new Schema({
     title: { type: String, required: true }
   , description: { type: String, required: true }
+  , totalVotes: {type: Number}
+  , voters: [{user_id: Number
+              , vote: Number}] 
 });
 
-// the schema is useless so far
-// we need to create a model using it
+// topic model
 var Topic = mongoose.model('Topic', topicSchema);
 
 // make this available to our users in our Node applications
