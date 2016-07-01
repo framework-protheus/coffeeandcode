@@ -18,7 +18,7 @@ gulp.task('istanbul', function (cb) {
         })) // Covering files
         .pipe(plugins.istanbul.hookRequire())
         .on('finish', function () {
-            gulp.src([paths.tests])
+            gulp.src(paths.tests)
                 .pipe(plugins.mocha())
                 .pipe(plugins.istanbul.writeReports({
                     reporters: ['text', 'text-summary']
