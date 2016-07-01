@@ -18,3 +18,7 @@ gulp.task('istanbul', function (cb) {
                 .on('end', cb);
         });
 });
+
+gulp.task('test', ['istanbul']);
+
+gulp.task('default', ['test']);
