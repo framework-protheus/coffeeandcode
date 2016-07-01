@@ -4,9 +4,6 @@
   "description": "Coffee and Code",
   "main": "index.js",
   "scripts": {
-    "testc": "istanbul cover node_modules/mocha/bin/_mocha",
-    "test": "./node_modules/.bin/mocha",
-    "testw": "./node_modules/.bin/mocha -w",
     "build": "npm install && bower install",
     "mongo": "mongod --dbpath ./db"
   },
@@ -34,5 +31,11 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "should": "^9.0.2"
+  },
+  "devDependencies": {
+    "gulp-load-plugins": "^0.6.0",
+    "gulp-mocha": "^1.1.0",
+    "gulp-istanbul": "^0.5.0",
+    "gulp": "^3.9.1"
   }
 }
