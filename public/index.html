@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang = "pt-br">
+<html lang = "pt-br" ng-app="CoffeeAndCodeApp">
 <head>
 	<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="bower_components/rateit/src/rateit.less" rel="stylesheet/less" type="text/css" />
 	<link href="css/index.css" rel="stylesheet">
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="coffeeandcode.js"></script>
 	<title>Coffe & Code</title>
 </head>
 
-<body>
+<body ng-controller="CoffeeAndCodeController">
 	<div class="container"> 
 		<div class="jumbotron">
 			<h1>Coffee & Code</h1>
@@ -40,7 +42,7 @@
 				</div> 
 			</div>
 			<div class="col-sm-3">
-				
+
 				<select id="backing2b">
 					<option value="0">0</option>
 					<option value="1">1</option>
@@ -53,8 +55,6 @@
 
 			</div>
 		</div>
-
-		
 	</div>
 
 	<script src="bower_components/jQuery/dist/jquery.min.js"></script>
