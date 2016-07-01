@@ -9,13 +9,15 @@ const session = require('express-session')
 const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
+const helmet = require('helmet');
 
 const PORT = process.env.PORT || 3000;
 
 mongoose.connect('mongodb://localhost:27017/coffeeandcode'); // connect to our database
 
 require('./config/passport')(passport);
-
+app.use(helmet());
+app.disable('x-powered-by');
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser.json()); // get information from html forms
