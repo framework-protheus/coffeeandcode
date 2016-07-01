@@ -13,6 +13,8 @@ describe('Topics: controller', function () {
       TopicCtrl.should.have.property('new');
       done();
     });
+  });
+  describe('#list()',function(){
     it('should return empty topic list', function(done){
       let req  = httpMocks.createRequest({
           method: 'GET',
@@ -27,10 +29,7 @@ describe('Topics: controller', function () {
       });
 
       TopicCtrl.list(req,res);
-
     });
   });
-
-
 
 });
