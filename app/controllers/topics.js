@@ -26,7 +26,7 @@ module.exports = {
     })
   }
   , update : function(req, res){
-    /*TODO LIST: 
+    /*TODO LIST:
         - mudar a condicao de busca para _ID
         - verificar se eh preciso fazer o push
         - somar ou subtrair o total de votos
@@ -38,7 +38,7 @@ module.exports = {
                                   , description: req.body.description
                                   , totalVotes: req.body.votes
                                 }
-                        , $push: { voters: 
+                        , $push: { voters:
                                     {voter: req.body.voter, vote: req.body.vote}
                                   }
                       }
