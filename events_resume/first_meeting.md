@@ -29,4 +29,4 @@
 | Discutir sobre Permissionamento e regras de acesso: Registro, Rotina, Módulo                                | 1   |        |
 | Discutir sobre solução para utilização de cores e destaque em MVC                                           | 1   |        |
 | Desempenho das funções que utilizamos (Performance)                                                         | 1   |        |
-| É possível usando o MVC criar uma tela com os mesmos moldes de uma MSDIALOG e chamar de uma opção do Browse?| 0   | Felipe |
+| É possível usando o MVC criar uma tela com os mesmos moldes de uma MSDIALOG e chamar de uma opção do Browse?| 0   | Felipe S.|
