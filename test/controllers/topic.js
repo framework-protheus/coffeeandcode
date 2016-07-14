@@ -31,5 +31,28 @@ describe('Topics: controller', function () {
       TopicCtrl.list(req,res);
     });
   });
+  describe('#new()',function(){
+    it('new Topic votes should be 0', function(done){
+      let req  = httpMocks.createRequest({
+          method: 'POST',
+          url: '',
+          body:{
+            title : "Titulo",
+            description: "Descricao",
+            votes: 10
+          }
+      });
+
+      var res = httpMocks.createResponse({eventEmitter: require('events').EventEmitter});
+      res.on('end', function() {
+        let data = JSON.parse( res._getData() );
+        data.should.have.property('totalVotes').which.is.a.Number().and.is.equal(0);
+        console.log(data);
+        done();
+      });
+
+      TopicCtrl.new(req,res);
+    });
+  });
 
 });

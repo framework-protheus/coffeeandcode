@@ -14,7 +14,7 @@ module.exports = {
     let topic = new Topic({
         title : req.body.title
       , description : req.body.description
-      , totalVotes: req.body.votes
+      , totalVotes: 0
       , voters: []
     });
     topic.save((err)=>{
